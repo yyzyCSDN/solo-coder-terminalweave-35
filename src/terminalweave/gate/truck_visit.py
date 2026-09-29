@@ -18,6 +18,7 @@ class TruckVisit:
     visit_id: str
     truck_id: str
     appointment_id: str | None
+    driver_id: str | None = None
     state: VisitState = VisitState.EXPECTED
     timestamps: dict[str, datetime] = field(default_factory=dict)
     exceptions: list[str] = field(default_factory=list)
